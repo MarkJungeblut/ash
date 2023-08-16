@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class StoreItem extends StatelessWidget {
@@ -8,7 +7,6 @@ class StoreItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 128,
-      height: 192,
       child: Column(
         children: [
           SizedBox(
@@ -17,8 +15,19 @@ class StoreItem extends StatelessWidget {
                 color: Colors.green,
               )
           ),
-          const Expanded(child: Text("Foo")),
-          const Expanded(child: Text("Foo")),
+          Container(
+            padding: const EdgeInsets.only(top: 10),
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: Text("Title",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            )
+          )
         ],
       ),
     );
